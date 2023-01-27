@@ -1,0 +1,41 @@
+.repo-container {
+    display: flex;
+    flex-direction: column;
+    /*
+    background-color: #95dada;
+    border: 1px solid grey;
+    */
+
+    background-color: #f41010;
+    border: 1px solid rgb(234, 21, 21);
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+  }
+  
+  /*
+  .repo-container:hover {
+    transform: scale(1.05);
+  }
+ */
+
+ .repo-container:hover {
+    transform: rotateY(10deg);
+
+  }
+
+  /*on click show and hide*/
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list li {
+    position: relative;
+    margin-bottom: 10px;
+  }

@@ -1,6 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Component } from 'react';
+import RepoList from './components/repo.list/repo-list.component';
+import SearchBox from './components/search-box/search-box.component';
+
 
 class App extends Component{
   constructor(){
@@ -9,6 +12,7 @@ class App extends Component{
     this.state ={
       //names
       repos:[],
+      searchField:'',
 
     };
   }
@@ -28,35 +32,38 @@ class App extends Component{
     
     )
   }
+
+onSearchChange = (event)=>{
+  console.log(event.target.value);
+
+  const searchField = event.target.value.toLocaleLowerCase();
+
+  this.setState(()=>{
+    return { searchField };
+  }
+  );
+};
+
   render(){
+
+    const{ repos, searchField } = this.state;
+    const { onSearchChange } = this;
+
+    const filteredRepos = this.state.repos.filter((repo)=>{
+      return repo.name.toLocaleLowerCase().includes(this.state.searchField);
+    });
+
 return(
     <div className='App'>
-      <input  className='search-box'
-      type='search'
-      placeholder='search repos'
-      onChange={(event)=>{
-        console.log(event.target.value);
-        const searchString = event.target.value.toLocaleLowerCase();
-
-        const filteredRepos = this.state.repos.filter((repo)=>{
-         return repo.name.toLocaleLowerCase().includes(searchString);
-
-        })
-        this.setState(()=>{
-          return { repos: filteredRepos };
-        });
-      }}
-      />
-      {this.state.repos.map((repo) =>{
-        return(
-          <div key={repo.id}>
-            <h1>{repo.name}</h1>
-            </div>
-        );
-      }
-      )}
+     
+      <SearchBox 
+      className='repos-ssearch-box'
+      onChangeHandler={ onSearchChange } 
+      placeholder={'search repositories'}
+   />
+      <RepoList  repos={ filteredRepos }/>
     </div>
 );
-  }
+    }
 }
 export default App;
