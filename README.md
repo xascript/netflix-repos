@@ -2,8 +2,8 @@
 
 This code displays a list on netflex repositories using Github Rest API. Here are few packages you'll need to install before running this application locally:
 
-###Inatll yarn here: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
-###Install react-helmet here: https://www.npmjs.com/package/react-helmet
+### Inatll yarn here: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+### Install react-helmet here: https://www.npmjs.com/package/react-helmet
 
 ### `Yarn start`
 
