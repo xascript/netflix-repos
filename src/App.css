@@ -9,10 +9,10 @@ body {
   background: linear-gradient(
     
  to left,
-    rgb(0, 0, 0) 0%,
-    rgb(0, 0, 0) 100%
+    rgba(233, 36, 36, 0.904) 0%,
+    rgb(75, 6, 6) 100%
     
   );
   text-align: center;
-  color: black;
+  color:white;
 }

@@ -80,4 +80,3 @@ class RepoCard extends Component {
 }
 
 export default RepoCard;
-
