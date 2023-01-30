@@ -2,7 +2,7 @@
 
 This code displays a list on netflex repositories using Github Rest API. Here are few packages you'll need to install before running this application locally:
 
-### Inatll yarn here: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+### Install yarn here: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
 ### Install react-helmet here: https://www.npmjs.com/package/react-helmet
 
 ### `Yarn start`
@@ -12,3 +12,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+###Deployment: Heroku link: https://netflex-repos-deploy.herokuapp.com/
