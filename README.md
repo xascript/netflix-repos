@@ -1,4 +1,4 @@
-# Netflex repos
+# Netflix repos
 
 This code displays a list on netflex repositories using Github Rest API. Here are few packages you'll need to install before running this application locally:
 
